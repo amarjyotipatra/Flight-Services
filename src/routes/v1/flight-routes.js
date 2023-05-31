@@ -16,7 +16,7 @@ router.patch("/:id",FlightController.updateFlight)
 //GET  /api/v1/flights/:id
 router.get("/:id",FlightController.getFlight)
 
-//PATCH /api/v1/flights/seats
+//PATCH /api/v1/flights/:flightId/seats
 router.patch("/:flightId/seats",
               FlightMiddlewares.validateUpdateSeatsRequest,
               FlightController.updateSeats
